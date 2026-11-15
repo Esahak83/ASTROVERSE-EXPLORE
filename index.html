@@ -1,112 +1,71 @@
 <!doctype html>
-<html lang="bn">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#050816">
-<title>COSMOS 3D — মহাবিশ্ব অনুসন্ধান</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<html lang="bn"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#030712"><title>ASTROVERSE EXPLORE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Orbitron:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#050816;--panel:#101a32;--line:#263858;--blue:#8ec5ff;--muted:#aebbd4}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% 0%,#14264b 0,#070d20 42%,#030611 100%);color:#f5f7ff;font-family:"Hind Siliguri",system-ui,sans-serif}
-header{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:12px 5%;background:#050816eF;border-bottom:1px solid #253453;backdrop-filter:blur(14px)}
-.logo{font:800 20px Orbitron,sans-serif;letter-spacing:2px;color:#9bcaff}.logo small{display:block;font:500 12px "Hind Siliguri";letter-spacing:1px;color:#d7e5ff}
-nav{display:flex;gap:8px;flex-wrap:wrap}nav a{color:#dce8ff;text-decoration:none;font-size:13px;padding:7px 10px;border:1px solid transparent;border-radius:20px}nav a:hover{border-color:#5f8fca;background:#13264a}
-.hero{min-height:76vh;display:grid;place-items:center;text-align:center;padding:60px 18px;position:relative;overflow:hidden}
-.hero:before{content:"";position:absolute;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,#2769b866,#142d6000 68%);filter:blur(8px)}
-.hero-inner{position:relative;max-width:850px}.eyebrow{color:#9bcaff;letter-spacing:3px;font:600 11px Orbitron,sans-serif}
-h1{font:800 clamp(35px,8vw,76px) Orbitron,sans-serif;letter-spacing:2px;margin:14px 0;color:#f5f9ff;text-shadow:0 0 30px #6aaaff66}
-.bn-title{font-size:clamp(25px,5vw,42px);font-weight:700;margin:0 0 10px;background:linear-gradient(90deg,#fff,#9bd2ff,#d9c4ff);-webkit-background-clip:text;background-clip:text;color:transparent}
-.lead{font-size:17px;color:#c3d1eb;line-height:1.8}.en{display:block;color:#91a7c9;font:13px/1.6 Orbitron,sans-serif;margin-top:5px;letter-spacing:.2px}
-.btn{display:inline-block;margin:18px 5px 0;padding:11px 18px;border-radius:24px;background:linear-gradient(100deg,#2774c9,#7256c9);color:white;text-decoration:none;font-weight:700;box-shadow:0 8px 30px #245ca955}
+:root{--bg:#030712;--line:#263858;--muted:#aebbd4}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:#f5f7ff;font-family:"Hind Siliguri",sans-serif}
+header{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:12px 5%;background:#030712ed;border-bottom:1px solid #253453;backdrop-filter:blur(14px)}
+.logo{font:800 18px Orbitron,sans-serif;letter-spacing:1px;color:#9bcaff}.logo small{display:block;font:600 12px "Hind Siliguri";letter-spacing:0;color:#d7e5ff}
+nav{display:flex;gap:4px;flex-wrap:wrap}nav a{color:#dce8ff;text-decoration:none;font-size:13px;padding:6px 8px;border-radius:20px}nav a:hover{background:#13264a}
+.hero{height:calc(100svh - 70px);min-height:690px;max-height:950px;position:relative;display:flex;align-items:flex-end;justify-content:center;text-align:center;overflow:hidden;background:radial-gradient(ellipse at 50% 35%,#142d59,#071126 52%,#02050e)}
+#solar-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0}.hero:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(180deg,transparent,rgba(3,7,18,.55),#030712);pointer-events:none;z-index:1}
+.hero-content{position:relative;z-index:2;width:min(900px,94%);padding:0 10px 55px;text-shadow:0 2px 18px #000}.eyebrow{color:#a6ccff;letter-spacing:3px;font:600 11px Orbitron,sans-serif}
+h1{font:800 clamp(30px,7vw,66px) Orbitron,sans-serif;letter-spacing:2px;margin:12px 0;color:#f5f9ff;text-shadow:0 0 28px #6aaaff88}.bn-title{font-size:clamp(25px,5vw,40px);font-weight:700;margin:0 0 8px;background:linear-gradient(90deg,#fff,#9bd2ff,#d9c4ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:17px;color:#d3def2;line-height:1.8;margin:8px auto;max-width:720px}.en{display:block;color:#91a7c9;font:13px/1.7 Orbitron,sans-serif;margin-top:5px}
+.btn{display:inline-block;margin:15px 5px 0;padding:11px 18px;border-radius:24px;background:linear-gradient(100deg,#2774c9,#7256c9);color:white;text-decoration:none;font-weight:700;box-shadow:0 8px 30px #245ca977}.hint{font-size:12px;color:#a7bbdc;margin-top:15px}
 section{padding:54px 5%;max-width:1200px;margin:auto}.section-head{text-align:center;margin-bottom:26px}.section-head h2{font-size:clamp(25px,4vw,38px);margin:0;color:#d9eaff}.section-head p{margin:5px 0;color:var(--muted)}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}.card{background:linear-gradient(145deg,#14213d,#0b1226);border:1px solid var(--line);border-radius:18px;padding:20px;min-height:175px;transition:.25s}.card:hover{transform:translateY(-4px);border-color:#659bd8;box-shadow:0 12px 35px #0007}.emoji{font-size:32px}.card h3{margin:8px 0 3px;font-size:22px;color:#e8f2ff}.card p{margin:0;color:#b7c6df;line-height:1.7}.satellite-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:center}.orbit-box{height:330px;position:relative;border-radius:22px;overflow:hidden;border:1px solid #29416a;background:radial-gradient(circle at 50% 50%,#142c53,#071025 65%,#030611)}
-.earth{position:absolute;width:145px;height:145px;left:50%;top:50%;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle at 35% 30%,#5fc4ff,#1760a5 45%,#071f54 75%);box-shadow:0 0 35px #3e9cff99,inset -18px -12px 25px #02091e}
-.earth:after{content:"";position:absolute;inset:15px 30px 25px 17px;border-radius:55% 35% 60% 30%;background:#58b978;clip-path:polygon(20% 0,75% 5%,100% 30%,80% 55%,65% 100%,35% 80%,15% 50%,0 20%);opacity:.85}
-.orbit{position:absolute;left:50%;top:50%;width:255px;height:255px;border:1px solid #75aefb77;border-radius:50%;transform:translate(-50%,-50%)}
-.orbit.two{width:310px;height:190px;transform:translate(-50%,-50%) rotate(-28deg);border-style:dashed}
-.sat{position:absolute;left:50%;top:50%;font-size:24px;transform-origin:0 0;animation:orbit 8s linear infinite;filter:drop-shadow(0 0 8px #9bd4ff)}
-.sat span{display:block;transform:translate(125px,-12px)}.sat.two{animation-duration:12s;animation-direction:reverse}.sat.two span{transform:translate(152px,-12px)}
-@keyframes orbit{from{transform:rotate(0)}to{transform:rotate(360deg)}}
-.info{background:#101a32;border:1px solid var(--line);border-radius:18px;padding:22px}.info h3{font-size:23px;margin:0 0 10px;color:#d9eaff}.info p{color:#c2cfe4;line-height:1.85;margin:0 0 12px}
-.note{border-left:3px solid #79b8ff;padding:10px 13px;background:#142441;border-radius:8px;color:#cbdaf1;font-size:14px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}.card{background:linear-gradient(145deg,#14213d,#0b1226);border:1px solid var(--line);border-radius:18px;padding:20px;min-height:175px;transition:.25s}.card:hover{transform:translateY(-4px);border-color:#659bd8;box-shadow:0 12px 35px #0007}.emoji{font-size:32px}.card h3{margin:8px 0 3px;font-size:22px;color:#e8f2ff}.card p{margin:0;color:#b7c6df;line-height:1.7}
+.satellite-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:center}.orbit-box{height:330px;position:relative;border-radius:22px;overflow:hidden;border:1px solid #29416a;background:radial-gradient(circle at 50% 50%,#142c53,#071025 65%,#030611)}
+.earth{position:absolute;width:145px;height:145px;left:50%;top:50%;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle at 35% 30%,#5fc4ff,#1760a5 45%,#071f54 75%);box-shadow:0 0 35px #3e9cff99,inset -18px -12px 25px #02091e}.earth:after{content:"";position:absolute;inset:15px 30px 25px 17px;border-radius:55% 35% 60% 30%;background:#58b978;clip-path:polygon(20% 0,75% 5%,100% 30%,80% 55%,65% 100%,35% 80%,15% 50%,0 20%);opacity:.85}
+.orbit{position:absolute;left:50%;top:50%;width:255px;height:255px;border:1px solid #75aefb77;border-radius:50%;transform:translate(-50%,-50%)}.orbit.two{width:310px;height:190px;transform:translate(-50%,-50%) rotate(-28deg);border-style:dashed}
+.sat{position:absolute;left:50%;top:50%;font-size:24px;transform-origin:0 0;animation:orbit 8s linear infinite;filter:drop-shadow(0 0 8px #9bd4ff)}.sat span{display:block;transform:translate(125px,-12px)}.sat.two{animation-duration:12s;animation-direction:reverse}.sat.two span{transform:translate(152px,-12px)}@keyframes orbit{to{transform:rotate(360deg)}}
+.info{background:#101a32;border:1px solid var(--line);border-radius:18px;padding:22px}.info h3{font-size:23px;margin:0 0 10px;color:#d9eaff}.info p{color:#c2cfe4;line-height:1.85;margin:0 0 12px}.note{border-left:3px solid #79b8ff;padding:10px 13px;background:#142441;border-radius:8px;color:#cbdaf1;font-size:14px}
 footer{text-align:center;padding:30px 15px;color:#8193b4;border-top:1px solid #1d2a44;font-size:13px}
-@media(max-width:720px){header{align-items:flex-start;gap:10px;flex-direction:column}nav{gap:3px}nav a{font-size:12px;padding:5px 7px}.hero{min-height:66vh}.satellite-layout{grid-template-columns:1fr}.orbit-box{height:290px}section{padding:42px 5%}}
-</style>
-</head>
-<body>
-<header>
-  <div class="logo">COSMOS 3D<small>মহাবিশ্ব অনুসন্ধান কেন্দ্র</small></div>
-  <nav>
-    <a href="#universe">মহাবিশ্ব</a><a href="#galaxy">গ্যালাক্সি</a><a href="#solar">সৌরজগৎ</a><a href="#earth">পৃথিবী</a><a href="#satellite">স্যাটেলাইট</a>
-  </nav>
-</header>
+@media(max-width:720px){header{align-items:flex-start;flex-direction:column}nav{gap:2px}nav a{font-size:12px;padding:5px 7px}.hero{min-height:690px;height:calc(100svh - 110px)}.satellite-layout{grid-template-columns:1fr}.orbit-box{height:290px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+</style></head><body>
+<header><div class="logo">ASTROVERSE <span style="color:#e8f2ff">EXPLORE</span><small>মহাবিশ্ব অনুসন্ধান কেন্দ্র</small></div>
+<nav><a href="#universe">মহাবিশ্ব</a><a href="#galaxy">গ্যালাক্সি</a><a href="#solar">সৌরজগৎ</a><a href="#earth">পৃথিবী</a><a href="#satellite">স্যাটেলাইট</a></nav></header>
 <main>
-  <div class="hero">
-    <div class="hero-inner">
-      <div class="eyebrow">A JOURNEY THROUGH SPACE</div>
-      <h1>COSMOS 3D</h1>
-      <p class="bn-title">মহাবিশ্বের অসীম পথে যাত্রা</p>
-      <p class="lead">আমাদের মাথার ওপরের আকাশ কত বিশাল—চলো, গ্রহ থেকে গ্যালাক্সি পর্যন্ত ঘুরে দেখি।<span class="en">Discover the vast universe, from planets to galaxies.</span></p>
-      <a class="btn" href="#universe">অনুসন্ধান শুরু করো</a>
-      <a class="btn" href="#satellite">স্যাটেলাইট দেখো</a>
-    </div>
-  </div>
-
-  <section id="universe">
-    <div class="section-head"><h2>মহাবিশ্ব <span class="en">UNIVERSE</span></h2><p>সব গ্যালাক্সি, নক্ষত্র, গ্রহ, আলো ও পদার্থের বিশাল সমষ্টি।</p><span class="en">The vast entirety of space, time, matter and energy.</span></div>
-    <div class="cards">
-      <article class="card"><div class="emoji">🌌</div><h3>গ্যালাক্সি</h3><p>কোটি কোটি নক্ষত্র, গ্যাস ও ধূলিকণার মহাকর্ষে বাঁধা বিশাল পরিবার।<span class="en">Galaxies are vast systems of stars, gas and dust.</span></p></article>
-      <article class="card"><div class="emoji">✨</div><h3>নক্ষত্র</h3><p>নিজের আলো ও তাপ তৈরি করা উত্তপ্ত গ্যাসের বিশাল গোলক।<span class="en">Stars are hot spheres of gas that produce light and heat.</span></p></article>
-      <article class="card"><div class="emoji">☄️</div><h3>নীহারিকা ও ধূমকেতু</h3><p>গ্যাস-ধূলির মেঘ এবং বরফ-ধূলি দিয়ে তৈরি মহাজাগতিক বস্তু।<span class="en">Nebulae are clouds of gas and dust; comets contain ice and dust.</span></p></article>
-    </div>
-  </section>
-
-  <section id="galaxy">
-    <div class="section-head"><h2>মিল্কিওয়ে গ্যালাক্সি <span class="en">MILKY WAY GALAXY</span></h2><p>আমাদের সূর্য এই বিশাল সর্পিল গ্যালাক্সির একটি নক্ষত্র।</p><span class="en">Our Sun is one star in this enormous spiral galaxy.</span></div>
-    <div class="cards">
-      <article class="card"><div class="emoji">🌀</div><h3>সর্পিল বাহু</h3><p>মিল্কিওয়ের সর্পিল গঠন ও নক্ষত্রের অঞ্চল।<span class="en">Explore the spiral structure and star-forming regions.</span></p></article>
-      <article class="card"><div class="emoji">☀️</div><h3>সূর্যের অবস্থান</h3><p>সূর্য গ্যালাক্সির কেন্দ্রের খুব কাছে নয়; এটি একটি বাহুর অঞ্চলে অবস্থিত।<span class="en">The Sun lies in a spiral-arm region, far from the galactic center.</span></p></article>
-    </div>
-  </section>
-
-  <section id="solar">
-    <div class="section-head"><h2>সৌরজগৎ <span class="en">SOLAR SYSTEM</span></h2><p>সূর্যকে কেন্দ্র করে ঘোরে আটটি গ্রহ এবং আরও অনেক ছোট বস্তু।</p><span class="en">Eight planets and many smaller bodies orbit the Sun.</span></div>
-    <div class="cards">
-      <article class="card"><div class="emoji">☀️</div><h3>সূর্য</h3><p>আমাদের সৌরজগতের কেন্দ্রীয় নক্ষত্র।<span class="en">The star at the center of our solar system.</span></p></article>
-      <article class="card"><div class="emoji">🪐</div><h3>আটটি গ্রহ</h3><p>বুধ, শুক্র, পৃথিবী, মঙ্গল, বৃহস্পতি, শনি, ইউরেনাস ও নেপচুন।<span class="en">Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune.</span></p></article>
-      <article class="card"><div class="emoji">🌙</div><h3>উপগ্রহ ও গ্রহাণু</h3><p>গ্রহের চাঁদ, গ্রহাণু, ধূমকেতু ও বামন গ্রহ।<span class="en">Moons, asteroids, comets and dwarf planets.</span></p></article>
-    </div>
-  </section>
-
-  <section id="earth">
-    <div class="section-head"><h2>পৃথিবী অনুসন্ধান <span class="en">EARTH EXPLORER</span></h2><p>আমাদের নীল গ্রহ, মহাদেশ, মহাসাগর ও দেশগুলোর পরিচয়।</p><span class="en">Explore our blue planet, continents, oceans and countries.</span></div>
-    <div class="cards">
-      <article class="card"><div class="emoji">🌍</div><h3>মহাদেশ ও মহাসাগর</h3><p>পৃথিবীতে ৭টি মহাদেশ ও ৫টি মহাসাগর রয়েছে।<span class="en">Earth has seven continents and five oceans.</span></p></article>
-      <article class="card"><div class="emoji">🗺️</div><h3>দেশের তথ্য</h3><p>দেশের সীমানা, রাজধানী, আয়তন ও ভৌগোলিক অবস্থান।<span class="en">Country borders, capitals, area and geographic location.</span></p></article>
-      <article class="card"><div class="emoji">🔎</div><h3>জুম করে দেখা</h3><p>পরবর্তী সংস্করণে ইন্টারঅ্যাকটিভ 3D গ্লোব ও মানচিত্র যুক্ত হবে।<span class="en">Interactive 3D globe and detailed maps are planned for the next build.</span></p></article>
-    </div>
-  </section>
-
-  <section id="satellite">
-    <div class="section-head"><h2>মহাকাশে স্যাটেলাইট <span class="en">SATELLITES IN SPACE</span></h2><p>পৃথিবীর চারপাশে বিভিন্ন কক্ষপথে স্যাটেলাইট ঘোরে।</p><span class="en">Satellites travel around Earth in different orbits.</span></div>
-    <div class="satellite-layout">
-      <div class="orbit-box" aria-label="পৃথিবীর চারপাশে স্যাটেলাইটের ধারণামূলক অ্যানিমেশন">
-        <div class="orbit"></div><div class="orbit two"></div><div class="earth"></div>
-        <div class="sat"><span>🛰️</span></div><div class="sat two"><span>🛰️</span></div>
-      </div>
-      <div class="info">
-        <h3>স্যাটেলাইট কোথায় থাকে?</h3>
-        <p>স্যাটেলাইট সাধারণত পৃথিবীর বায়ুমণ্ডলের অনেক ওপরে নির্দিষ্ট কক্ষপথে থাকে। কিছু স্যাটেলাইট পৃথিবীর কাছের নিম্ন কক্ষপথে, কিছু মাঝারি কক্ষপথে, আর কিছু অনেক দূরের ভূস্থির কক্ষপথে ঘোরে।</p>
-        <span class="en">Satellites orbit far above most of Earth's atmosphere. Some use Low Earth Orbit, others Medium Earth Orbit, while some stay in Geostationary Orbit.</span>
-        <div class="note">এটি ধারণামূলক অ্যানিমেশন—পৃথিবী ও কক্ষপথের দূরত্ব বাস্তব অনুপাতে দেখানো হয়নি।</div>
-        <span class="en">This is a conceptual animation; sizes and orbital distances are not to scale.</span>
-      </div>
-    </div>
-  </section>
-</main>
-<footer>COSMOS 3D · Explore • Discover • Learn<br>শিক্ষামূলক প্রাথমিক সংস্করণ — আরও 3D মডেল ও বৈজ্ঞানিক ডেটা ধাপে ধাপে যুক্ত হবে।</footer>
-</body>
-</html>
+<div class="hero"><canvas id="solar-canvas" aria-label="Animated 3D solar system"></canvas><div class="hero-content">
+<div class="eyebrow">A JOURNEY THROUGH SPACE</div><h1>ASTROVERSE<br><span style="font-size:.48em;letter-spacing:5px;color:#b8d8ff">EXPLORE</span></h1>
+<p class="bn-title">মহাবিশ্বের অসীম পথে যাত্রা</p><p class="lead">আমাদের মাথার ওপরের আকাশ কত বিশাল—চলো, গ্রহ থেকে গ্যালাক্সি পর্যন্ত ঘুরে দেখি।<span class="en">Discover the vast universe, from planets to galaxies.</span></p>
+<a class="btn" href="#universe">অনুসন্ধান শুরু করো</a><a class="btn" href="#satellite">স্যাটেলাইট দেখো</a><div class="hint">🖐️ 3D দৃশ্য ঘোরাতে টেনে ধরো · জুম করতে পিঞ্চ বা স্ক্রল করো</div></div></div>
+<section id="universe"><div class="section-head"><h2>মহাবিশ্ব <span class="en">UNIVERSE</span></h2><p>সব গ্যালাক্সি, নক্ষত্র, গ্রহ, আলো ও পদার্থের বিশাল সমষ্টি।</p><span class="en">The vast entirety of space, time, matter and energy.</span></div><div class="cards">
+<article class="card"><div class="emoji">🌌</div><h3>গ্যালাক্সি</h3><p>কোটি কোটি নক্ষত্র, গ্যাস ও ধূলিকণার মহাকর্ষে বাঁধা বিশাল পরিবার।<span class="en">Galaxies are vast systems of stars, gas and dust.</span></p></article>
+<article class="card"><div class="emoji">✨</div><h3>নক্ষত্র</h3><p>নিজের আলো ও তাপ তৈরি করা উত্তপ্ত গ্যাসের বিশাল গোলক।<span class="en">Stars are hot spheres of gas that produce light and heat.</span></p></article>
+<article class="card"><div class="emoji">☄️</div><h3>নীহারিকা ও ধূমকেতু</h3><p>গ্যাস-ধূলির মেঘ এবং বরফ-ধূলি দিয়ে তৈরি মহাজাগতিক বস্তু।<span class="en">Nebulae are clouds of gas and dust; comets contain ice and dust.</span></p></article></div></section>
+<section id="galaxy"><div class="section-head"><h2>মিল্কিওয়ে গ্যালাক্সি <span class="en">MILKY WAY GALAXY</span></h2><p>আমাদের সূর্য এই বিশাল সর্পিল গ্যালাক্সির একটি নক্ষত্র।</p><span class="en">Our Sun is one star in this enormous spiral galaxy.</span></div><div class="cards">
+<article class="card"><div class="emoji">🌀</div><h3>সর্পিল বাহু</h3><p>মিল্কিওয়ের সর্পিল গঠন ও নক্ষত্রের অঞ্চল।<span class="en">Explore the spiral structure and star-forming regions.</span></p></article>
+<article class="card"><div class="emoji">☀️</div><h3>সূর্যের অবস্থান</h3><p>সূর্য গ্যালাক্সির কেন্দ্রের খুব কাছে নয়; এটি একটি বাহুর অঞ্চলে অবস্থিত।<span class="en">The Sun lies in a spiral-arm region, far from the galactic center.</span></p></article></div></section>
+<section id="solar"><div class="section-head"><h2>সৌরজগৎ <span class="en">SOLAR SYSTEM</span></h2><p>সূর্যকে কেন্দ্র করে ঘোরে আটটি গ্রহ এবং আরও অনেক ছোট বস্তু।</p><span class="en">Eight planets and many smaller bodies orbit the Sun.</span></div><div class="cards">
+<article class="card"><div class="emoji">☀️</div><h3>সূর্য</h3><p>আমাদের সৌরজগতের কেন্দ্রীয় নক্ষত্র।<span class="en">The star at the center of our solar system.</span></p></article>
+<article class="card"><div class="emoji">🪐</div><h3>আটটি গ্রহ</h3><p>বুধ, শুক্র, পৃথিবী, মঙ্গল, বৃহস্পতি, শনি, ইউরেনাস ও নেপচুন।<span class="en">Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune.</span></p></article>
+<article class="card"><div class="emoji">🌙</div><h3>উপগ্রহ ও গ্রহাণু</h3><p>গ্রহের চাঁদ, গ্রহাণু, ধূমকেতু ও বামন গ্রহ।<span class="en">Moons, asteroids, comets and dwarf planets.</span></p></article></div></section>
+<section id="earth"><div class="section-head"><h2>পৃথিবী অনুসন্ধান <span class="en">EARTH EXPLORER</span></h2><p>আমাদের নীল গ্রহ, মহাদেশ, মহাসাগর ও দেশগুলোর পরিচয়।</p><span class="en">Explore our blue planet, continents, oceans and countries.</span></div><div class="cards">
+<article class="card"><div class="emoji">🌍</div><h3>মহাদেশ ও মহাসাগর</h3><p>পৃথিবীতে ৭টি মহাদেশ ও ৫টি মহাসাগর রয়েছে।<span class="en">Earth has seven continents and five oceans.</span></p></article>
+<article class="card"><div class="emoji">🗺️</div><h3>দেশের তথ্য</h3><p>দেশের সীমানা, রাজধানী, আয়তন ও ভৌগোলিক অবস্থান।<span class="en">Country borders, capitals, area and geographic location.</span></p></article>
+<article class="card"><div class="emoji">🔎</div><h3>জুম করে দেখা</h3><p>পরবর্তী সংস্করণে ইন্টারঅ্যাকটিভ 3D গ্লোব ও মানচিত্র যুক্ত হবে।<span class="en">Interactive 3D globe and detailed maps are planned for the next build.</span></p></article></div></section>
+<section id="satellite"><div class="section-head"><h2>মহাকাশে স্যাটেলাইট <span class="en">SATELLITES IN SPACE</span></h2><p>পৃথিবীর চারপাশে বিভিন্ন কক্ষপথে স্যাটেলাইট ঘোরে।</p><span class="en">Satellites travel around Earth in different orbits.</span></div><div class="satellite-layout">
+<div class="orbit-box"><div class="orbit"></div><div class="orbit two"></div><div class="earth"></div><div class="sat"><span>🛰️</span></div><div class="sat two"><span>🛰️</span></div></div>
+<div class="info"><h3>স্যাটেলাইট কোথায় থাকে?</h3><p>স্যাটেলাইট সাধারণত পৃথিবীর বায়ুমণ্ডলের অনেক ওপরে নির্দিষ্ট কক্ষপথে থাকে। কিছু স্যাটেলাইট পৃথিবীর কাছের নিম্ন কক্ষপথে, কিছু মাঝারি কক্ষপথে, আর কিছু অনেক দূরের ভূস্থির কক্ষপথে ঘোরে।</p><span class="en">Satellites orbit far above most of Earth's atmosphere. Some use Low Earth Orbit, others Medium Earth Orbit, while some stay in Geostationary Orbit.</span><div class="note">এটি ধারণামূলক অ্যানিমেশন—পৃথিবী ও কক্ষপথের দূরত্ব বাস্তব অনুপাতে দেখানো হয়নি।</div><span class="en">This is a conceptual animation; sizes and orbital distances are not to scale.</span></div></div></section>
+</main><footer>ASTROVERSE EXPLORE · Explore • Discover • Learn<br>শিক্ষামূলক সংস্করণ — 3D মডেল ও বৈজ্ঞানিক ডেটা ধাপে ধাপে যুক্ত হবে।</footer>
+<script type="module">
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js';
+import {OrbitControls} from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js';
+const canvas=document.querySelector('#solar-canvas'),scene=new THREE.Scene();scene.fog=new THREE.FogExp2(0x030712,.008);
+const camera=new THREE.PerspectiveCamera(48,1,.1,500);camera.position.set(0,22,48);
+const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true,powerPreference:'high-performance'});
+renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.5));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.25;
+const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.dampingFactor=.045;controls.enablePan=false;controls.minDistance=17;controls.maxDistance=85;controls.autoRotate=true;controls.autoRotateSpeed=.25;
+scene.add(new THREE.AmbientLight(0x7188bb,1.05));scene.add(new THREE.PointLight(0xffc77a,190,180,1.5));
+function texture(color){const c=document.createElement('canvas');c.width=512;c.height=256;const x=c.getContext('2d');const col=new THREE.Color(color);const g=x.createLinearGradient(0,0,512,256);g.addColorStop(0,'#'+col.clone().multiplyScalar(1.2).getHexString());g.addColorStop(.5,'#'+col.getHexString());g.addColorStop(1,'#'+col.clone().multiplyScalar(.45).getHexString());x.fillStyle=g;x.fillRect(0,0,512,256);for(let i=0;i<28;i++){x.fillStyle=`rgba(8,18,35,${Math.random()*.2})`;x.beginPath();x.ellipse(Math.random()*512,Math.random()*256,8+Math.random()*42,3+Math.random()*14,Math.random()*3,0,Math.PI*2);x.fill()}const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;return t}
+const sg=new THREE.BufferGeometry(),sp=[];for(let i=0;i<2400;i++){const r=90+Math.random()*170,a=Math.random()*Math.PI*2,b=Math.acos(2*Math.random()-1);sp.push(r*Math.sin(b)*Math.cos(a),r*Math.cos(b),r*Math.sin(b)*Math.sin(a))}sg.setAttribute('position',new THREE.Float32BufferAttribute(sp,3));const stars=new THREE.Points(sg,new THREE.PointsMaterial({color:0xc9ddff,size:.48,transparent:true,opacity:.9}));scene.add(stars);
+const sun=new THREE.Mesh(new THREE.SphereGeometry(3.5,64,64),new THREE.MeshBasicMaterial({color:0xffb52e}));scene.add(sun);const glow=new THREE.Mesh(new THREE.SphereGeometry(4.6,48,48),new THREE.MeshBasicMaterial({color:0xff8a22,transparent:true,opacity:.13,side:THREE.BackSide}));scene.add(glow);
+const data=[['Mercury',.55,6.2,0x9a928a,4.8],['Venus',.92,9,0xd6ad75,3.5],['Earth',1,12.2,0x287acb,2.8],['Mars',.72,15.5,0xb85c3b,2.3],['Jupiter',2.35,21,0xc99a70,1.35],['Saturn',1.95,27.5,0xd8c28d,1.05],['Uranus',1.35,34,0x7bcbd1,.78],['Neptune',1.3,40,0x315bd2,.62]],objects=[];
+for(const [name,size,dist,color,speed] of data){const group=new THREE.Group();scene.add(group);const mesh=new THREE.Mesh(new THREE.SphereGeometry(size,40,32),new THREE.MeshStandardMaterial({map:texture(color),roughness:.88}));group.add(mesh);const orbit=new THREE.Mesh(new THREE.RingGeometry(dist-.025,dist+.025,160),new THREE.MeshBasicMaterial({color:0x8aa7d6,transparent:true,opacity:.2,side:THREE.DoubleSide}));orbit.rotation.x=Math.PI/2;scene.add(orbit);if(name==='Saturn'){const ring=new THREE.Mesh(new THREE.RingGeometry(size*1.35,size*2.15,80),new THREE.MeshBasicMaterial({color:0xc9b58d,side:THREE.DoubleSide,transparent:true,opacity:.72}));ring.rotation.x=Math.PI/2.25;mesh.add(ring)}objects.push({mesh,dist,speed,phase:Math.random()*6.28})}
+function resize(){const w=canvas.clientWidth,h=canvas.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix()}addEventListener('resize',resize);resize();
+function animate(t){requestAnimationFrame(animate);const time=t*.001;sun.rotation.y+=.0018;glow.scale.setScalar(1+Math.sin(time*1.2)*.018);objects.forEach((p,i)=>{const a=time*.08*p.speed+p.phase;p.mesh.position.set(Math.cos(a)*p.dist,Math.sin(a*1.7)*.22,Math.sin(a)*p.dist);p.mesh.rotation.y+=.006+i*.0004});stars.rotation.y=time*.003;controls.update();renderer.render(scene,camera)}requestAnimationFrame(animate);
+</script></body></html>

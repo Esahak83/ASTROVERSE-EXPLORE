@@ -1,18 +1,12 @@
-# COSMOS 3D — Starter
+# ASTROVERSE EXPLORE
+Updated starter with the new branding and an interactive animated Three.js solar-system hero.
 
-এটি COSMOS 3D ওয়েবসাইটের প্রথম responsive starter build।
+- Drag to rotate the scene; pinch/scroll to zoom.
+- Responsive for mobile and desktop.
+- Bengali uses Hind Siliguri; English uses Orbitron.
+- Three.js is loaded from jsDelivr, so internet is required for the 3D scene.
 
-## কী আছে
-- বাংলা লেখার জন্য Hind Siliguri ফন্ট এবং ইংরেজির জন্য Orbitron
-- বাংলা আগে, ইংরেজি ব্যাখ্যা নিচে
-- Universe, Milky Way, Solar System, Earth Explorer এবং Satellite বিভাগ
-- পৃথিবীর চারপাশে স্যাটেলাইটের ধারণামূলক CSS animation
-- মোবাইল ও ডেস্কটপ responsive layout
+## Deploy from mobile
+Replace the existing `index.html` in the connected GitHub repository with this one and commit the change. Vercel should redeploy automatically.
 
-## মোবাইল থেকে চালানো
-1. ZIP extract করে `index.html` ফাইলটি দেখো।
-2. GitHub repository-তে `index.html` আপলোড করো (আগের ফাইল replace করতে চাইলে আগে backup রাখো)।
-3. Vercel যদি ওই GitHub repository-র সঙ্গে connected থাকে, commit/push হলে deploy শুরু হবে।
-
-## গুরুত্বপূর্ণ
-এটি প্রথম visual starter; এখনো প্রকৃত Three.js 3D globe, zoomable country borders, live satellite positions বা high-resolution Earth tiles যুক্ত হয়নি। পরের ধাপে এগুলো আলাদা করে যোগ করতে হবে। Google Fonts ব্যবহারে ইন্টারনেট প্রয়োজন।
+Note: this build adds a true animated 3D solar-system hero. The detailed zoomable Earth globe, country boundaries and live satellite positions are not yet implemented. Planet sizes and distances are illustrative, not to scale.
