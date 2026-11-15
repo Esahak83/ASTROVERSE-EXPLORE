@@ -52,8 +52,11 @@ footer{text-align:center;padding:30px 15px;color:#8193b4;border-top:1px solid #1
 <div class="orbit-box"><div class="orbit"></div><div class="orbit two"></div><div class="earth"></div><div class="sat"><span>🛰️</span></div><div class="sat two"><span>🛰️</span></div></div>
 <div class="info"><h3>স্যাটেলাইট কোথায় থাকে?</h3><p>স্যাটেলাইট সাধারণত পৃথিবীর বায়ুমণ্ডলের অনেক ওপরে নির্দিষ্ট কক্ষপথে থাকে। কিছু স্যাটেলাইট পৃথিবীর কাছের নিম্ন কক্ষপথে, কিছু মাঝারি কক্ষপথে, আর কিছু অনেক দূরের ভূস্থির কক্ষপথে ঘোরে।</p><span class="en">Satellites orbit far above most of Earth's atmosphere. Some use Low Earth Orbit, others Medium Earth Orbit, while some stay in Geostationary Orbit.</span><div class="note">এটি ধারণামূলক অ্যানিমেশন—পৃথিবী ও কক্ষপথের দূরত্ব বাস্তব অনুপাতে দেখানো হয়নি।</div><span class="en">This is a conceptual animation; sizes and orbital distances are not to scale.</span></div></div></section>
 </main><footer>ASTROVERSE EXPLORE · Explore • Discover • Learn<br>শিক্ষামূলক সংস্করণ — 3D মডেল ও বৈজ্ঞানিক ডেটা ধাপে ধাপে যুক্ত হবে।</footer>
+<script type="importmap">
+{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}
+</script>
 <script type="module">
-import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js';
+import * as THREE from 'three';
 import {OrbitControls} from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js';
 const canvas=document.querySelector('#solar-canvas'),scene=new THREE.Scene();scene.fog=new THREE.FogExp2(0x030712,.008);
 const camera=new THREE.PerspectiveCamera(48,1,.1,500);camera.position.set(0,22,48);
